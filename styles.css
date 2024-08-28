@@ -1,0 +1,55 @@
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    padding: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: lightgreen;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 480px;
+    background-color: red;
+    flex: 1 1 0;
+}
+
+.box {
+    background-color: black;
+    
+    margin: 2px;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    border: 1px black solid;
+}
