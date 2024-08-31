@@ -24,6 +24,10 @@ button {
     border-style: none;
 }
 
+div.column {
+    opacity: 0.1;
+}
+
 
 .container {
     display: flex;
@@ -38,6 +42,7 @@ button {
 .box {
     background-color: black;
     margin: 2px;
+    
 }
 
 .row {
@@ -52,5 +57,5 @@ button {
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-    border: 1px black solid;
+    border: 0.5px black solid;
 }

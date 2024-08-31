@@ -22,6 +22,17 @@ function randomColor() {
   return 'rgb(' + color.join(', ') + ')';
 }
 
+function increaseOpacity(box) {
+    console.log('starting opacity: ' + box.style.opacity);
+    let opacity = parseFloat(box.style.opacity) || 0;
+    opacity = Math.min(opacity + 0.1, 1);
+    box.style.opacity = opacity;
+    console.log(box.style.opacity);
+    console.log(opacity);
+    
+};
+
+
 function createGrid(boxesPerRow) {
     // create row
      for (let i = 0; i < boxesPerRow; i++) {
@@ -34,12 +45,16 @@ function createGrid(boxesPerRow) {
             box.classList.add('column');
             box.addEventListener("mouseover", (event) => {
                 box.style.backgroundColor = randomColor();
+                increaseOpacity(box);
             });
             row.appendChild(box);
         }
         container.appendChild(row);
     }
 }
+
+// create function to incrementOpacity on mouseover event
+
 
 createGrid(16);
 
@@ -48,7 +63,7 @@ createGrid(16);
 // Store prompt value as a number using parseInt() (prompt stores as string)
 // Function should call createGrid(boxesPerRow) to create new grid
 
-// ERASE previous boxes so that the grid can be reset
+// REMOVE previous grid so that the grid can be set
 function resetGrid(){
   // Target the div boxes
   //e.firstElementChild can be used. 
